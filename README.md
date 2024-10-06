@@ -4,4 +4,4 @@ I did MP2 about making a calculator, including two main files and three util(cip
 
 I have asked help from the evening tutors.
 
-The link to the gitHub is:https://github.com/yantiffa/MP2.git# MP2_fun_with_fractions
+The link to the gitHub is:https://github.com/yantiffa/MP2_fun_with_fractions
