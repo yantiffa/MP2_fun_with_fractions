@@ -39,7 +39,7 @@ public class InteractiveCalculator {
           registerset.store(parts[1].charAt(0), previous); //store the value to the register
           continue;
         } else {
-          pen.println("*** ERROR [STORE command received invalid register] ***"); //gives error msg
+          pen.println("*** ERROR [Invalid expression] ***"); //gives error msg
           continue;
         } // if
       } // if
@@ -49,21 +49,21 @@ public class InteractiveCalculator {
       String[] inputarr = input.split(" "); //declare variables to store info
       String operator = null;
       BigFraction current = null;
-      boolean expectnum = true;
+      boolean expectnum = true; // keeps an eye for if expecting an operand or operator
       boolean validExpression = true;
 
       pen.printf("> ");
       for (String str : inputarr) { // Loop through user input
         if (str.equals("+") || str.equals("-") || str.equals("/") || str.equals("*")) {
           if (expectnum) {
-            validExpression = false; //invalid expression!
+            validExpression = false; //invalid expression
             break;
           } // if
           operator = str; //store the operator
           expectnum = true;
         } else {
           if (!expectnum) {
-            validExpression = false; //invalid expression!
+            validExpression = false; //invalid expression
             break;
           } // if
           BigFraction operand;
